@@ -222,6 +222,16 @@ Current Number 9Previous Number8is 17
 
 ## Webcam
 
+A webcam, short for "web camera," is a digital camera that captures video and sometimes audio, and streams or records it in real-time. It is typically connected to a computer via USB or integrated into a device such as a laptop or a smartphone.
+
+## uses of webcam code
+
+1.Video Streaming
+2.Computer Vision Applications
+3.Testing and Debugging
+
+## Example code for Webcam
+
 1.Import the OpenCV library:
 
 import cv2 
