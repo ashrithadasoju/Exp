@@ -75,7 +75,7 @@ def crop_image(image, boxes):
 	
     return cropped_images
     
-4.Opens the CSV file using a context manager (with open(csv_file, 'r') as file) and reads its contents using csv.DictReader, which reads each row of the CSV file as a dictionary where column headers are keys.
+4.Open the CSV file using a context manager (with open(csv_file, 'r') as file) and reads its contents using csv.DictReader, which reads each row of the CSV file as a dictionary where column headers are keys.
 
 with open(csv_file, 'r') as file:
 
