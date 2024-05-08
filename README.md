@@ -174,16 +174,50 @@ for i,col in enumerate(color):
 
 ![Figure_1](https://github.com/ashrithadasoju/Exp/assets/169047414/87ec0753-faa6-43ac-abf3-04b11b78f088)
 
-## task
-```
+## Iterating the first 10 numbers
+
+This code initializes a list num containing numbers from 0 to 9. Then, it iterates through each element in num using a for loop. Within each iteration
+
+1.It calculates the sum of the current number i and the previousNum.
 
 num = list(range(10))
+
 previousNum = 0
+
 for i in num:
+
     sum = previousNum + i
+
+2.Print a message indicating the current number, the previous number, and the sum.
+
     print('Current Number '+ str(i) + 'Previous Number' + str(previousNum) + 'is ' + str(sum))
+    
+3.Update the previousNum variable to the current number i.
+    
     previousNum=i
-```
+
+## output
+
+Current Number 0Previous Number0is 0
+
+Current Number 1Previous Number0is 1
+
+Current Number 2Previous Number1is 3
+
+Current Number 3Previous Number2is 5
+
+Current Number 4Previous Number3is 7
+
+Current Number 5Previous Number4is 9
+
+Current Number 6Previous Number5is 11
+
+Current Number 7Previous Number6is 13
+
+Current Number 8Previous Number7is 15
+
+Current Number 9Previous Number8is 17
+
 
 ## video
 ```
