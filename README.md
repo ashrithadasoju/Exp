@@ -102,7 +102,7 @@ for i,col in enumerate(color):
 
 ## output
 
-
+![Figure_1](https://github.com/ashrithadasoju/Exp/assets/169047414/87ec0753-faa6-43ac-abf3-04b11b78f088)
 
 ## task
 ```
