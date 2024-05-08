@@ -110,8 +110,10 @@ with open(csv_file, 'r') as file:
  ![7622202030987_f306535d741c9148dc458acbbc887243_L_487](https://github.com/ashrithadasoju/Exp/assets/169047414/d27f00f4-5fae-4b44-a281-f7d5c628bae6)
 
 
-## output
+## output 1
 
+
+![full_7622202030987_f306535d741c9148dc458acbbc887243_L_487](https://github.com/ashrithadasoju/Exp/assets/169047414/f02bd02f-19b6-43c9-9952-beffe612e07d)
 
 
 ## histogram
