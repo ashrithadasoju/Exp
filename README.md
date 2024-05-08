@@ -1,15 +1,36 @@
-## cartzy
-```
+## bounding box
+
+In this The bounding box is a made-up square that serves as a guideline point for object recognition and creates a collision box for that element. Data annotators create these rectangles over pictures, defining the X, Y item coordinates of interest inside each image.
+
+## uses of bounding box
+
+1.Bounding boxes are used to label data for computer vision tasks
+2.Object Detection
+3.allowing machine learning models to identify and localize objects within an image.
+
+## Example program for bounding boxes
+
+1.import the libraries:The import keyword lets you import entire libraries or specific library functions into your code.
 
 import os
+
 import csv
+
 from PIL import Image, ImageDraw
+
+2.Reading the file:A CSV (Comma Separated Values) file is a form of plain text document that uses a particular format to organize tabular information.
 
 csv_file = ("/home/ashritha-dasoju/Downloads/7622202030987_bounding_box.csv")
 image_dir = ("/home/ashritha-dasoju/Downloads/7622202030987")
 output_dir = ("/home/ashritha-dasoju/Downloads/7622202030987_with_boxes")
 
 os.makedirs(output_dir, exist_ok=True)
+
+3.Defines two functions:
+
+draw_boxes(image, boxes): This function takes an image and a list of bounding boxes as input and draws rectangles around the bounding boxes on the image using the ImageDraw module
+
+crop_image(image, boxes): This function takes an image and a list of bounding boxes as input and crops the image according to the bounding box coordinates, returning a list of cropped images.
 
 def draw_boxes(image, boxes):
     draw = ImageDraw.Draw(image)
@@ -32,9 +53,13 @@ def crop_image(image, boxes):
         cropped_img = image.crop((left, top, right, bottom))
         cropped_images.append(cropped_img)
     return cropped_images
-
+    
+4.Opens the CSV file using a context manager (with open(csv_file, 'r') as file) and reads its contents using csv.DictReader, which reads each row of the CSV file as a dictionary where column headers are keys.
 
 with open(csv_file, 'r') as file:
+
+5.Iterates over each row in the CSV file. For each row:
+
     csv_reader = csv.DictReader(file)
     for row in csv_reader:
         image_name = row['filename']
@@ -47,7 +72,10 @@ with open(csv_file, 'r') as file:
             cropped_img.save(os.path.join(output_dir, f"{i}_{image_name}"))  
         full_image_with_boxes = draw_boxes(image, boxes)
         full_image_with_boxes.save(os.path.join(output_dir, f"full_{image_name}"))
-```
+	
+## input
+
+ 
 
 ## histogram
 A histogram is a chart that plots the distribution of a numeric variable's values as a series of bars
