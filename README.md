@@ -107,8 +107,8 @@ with open(csv_file, 'r') as file:
 	
 ## input
 
- 
-![full_7622202030987_f306535d741c9148dc458acbbc887243_L_487](https://github.com/ashrithadasoju/Exp/assets/169047414/8035905b-8754-44c2-93bc-96e0e3f0e358)
+ ![7622202030987_f306535d741c9148dc458acbbc887243_L_487](https://github.com/ashrithadasoju/Exp/assets/169047414/d27f00f4-5fae-4b44-a281-f7d5c628bae6)
+
 
 ## output
 
