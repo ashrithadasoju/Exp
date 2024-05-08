@@ -117,7 +117,8 @@ with open(csv_file, 'r') as file:
 
 ## output 2
 
-![0_7622202030987_f306535d741c9148dc458acbbc887243_L_488](https://github.com/ashrithadasoju/Exp/assets/169047414/d63a827a-39bb-4724-91c4-bb44144a688d)
+![0_7622202030987_f306535d741c9148dc458acbbc887243_L_519](https://github.com/ashrithadasoju/Exp/assets/169047414/4f885f1e-ac4a-40fd-b446-6bddc80f26e2)
+
 
 ## histogram
 A histogram is a chart that plots the distribution of a numeric variable's values as a series of bars
