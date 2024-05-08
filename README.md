@@ -50,22 +50,45 @@ with open(csv_file, 'r') as file:
 ```
 
 ## histogram
-```
+A histogram is a chart that plots the distribution of a numeric variable's values as a series of bars
+
+## importing the libraries
 
 import numpy as np
+
 import cv2 as cv
+
 from matplotlib import pyplot as plt
+
+## Reading the image
  
 img = cv.imread('/home/ashritha-dasoju/Desktop/my_folder/tom_jerry.jpg')
+
+## Saving the Image:
+
 cv.imwrite("/home/ashritha-dasoju/Desktop/tom.jpg",img)
+
+## Error Handling:
+
 assert img is not None, "file could not be read, check with os.path.exists()"
+
+## Calculating and Plotting Histogram:
+
 color = ('b','g','r')
+
 for i,col in enumerate(color):
+
  histr = cv.calcHist([img],[i],None,[256],[0,256])
+ 
  plt.plot(histr,color = col)
+ 
  plt.xlim([0,256])
+
+## Displaying the Histogram:
+
 plt.show()
-```
+
+
 
 ## task
 ```
