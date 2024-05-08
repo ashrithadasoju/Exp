@@ -88,7 +88,7 @@ for i,col in enumerate(color):
 
 plt.show()
 
-
+![tom](https://github.com/ashrithadasoju/Exp/assets/169047414/4bcb3bce-30cb-4a57-851e-0b4d24d32c33)
 
 ## task
 ```
