@@ -52,7 +52,17 @@ with open(csv_file, 'r') as file:
 ## histogram
 A histogram is a chart that plots the distribution of a numeric variable's values as a series of bars
 
-## importing the libraries
+## uses of histogram
+
+1.An histogram image is a graphical representation of the distribution of pixel intensities in an image.
+
+2. It helps you understand the brightness, contrast, and overall tonal range of an image.
+
+3. It's useful for image processing, editing, and analyzing the characteristics of an image.
+
+## Example program of histogram
+
+1.importing the libraries:The import keyword lets you import entire libraries or specific library functions into your code.
 
 import numpy as np
 
@@ -60,19 +70,19 @@ import cv2 as cv
 
 from matplotlib import pyplot as plt
 
-## Reading the image
+2.Reading the image:function is used to read an image from the specified path
  
 img = cv.imread('/home/ashritha-dasoju/Desktop/my_folder/tom_jerry.jpg')
 
-## Saving the Image:
+3.Saving the Image:function is used to save the read image (img) to a file path 
 
 cv.imwrite("/home/ashritha-dasoju/Desktop/tom.jpg",img)
 
-## Error Handling:
+4.Error Handling:An assert statement is used to ensure that the image (img) is not None, i.e., the image has been successfully read. If the condition evaluates to False, it raises an assertion error with the message
 
 assert img is not None, "file could not be read, check with os.path.exists()"
 
-## Calculating and Plotting Histogram:
+5.Calculating and Plotting Histogram:
 
 color = ('b','g','r')
 
