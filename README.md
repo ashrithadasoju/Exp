@@ -219,33 +219,55 @@ Current Number 8Previous Number7is 15
 Current Number 9Previous Number8is 17
 
 
-## video
-```
+## Webcam
+
+1.Import the OpenCV library:
 
 # import the opencv library 
 import cv2 
 
+2.Define a video capture object (vid) by calling cv2.VideoCapture(0)
 
 # define a video capture object 
-vid = cv2.VideoCapture(0) 
+vid = cv2.VideoCapture(0)
+
+3.Start an infinite loop (while(True)) to continuously capture frames from the video:
 
 while(True): 
 	
 	# Capture the video frame 
+ 
 	# by frame 
+
+4.the function vid.read() captures a frame from the video and returns two values: ret, a boolean indicating whether a frame was successfully captured, and frame, the captured frame.
+ 
 	ret, frame = vid.read() 
 
 	# Display the resulting frame 
+
+ 5.cv2.imshow('frame', frame) displays the captured frame in a window named 'frame'.
+ 
 	cv2.imshow('frame', frame) 
 	
 	# the 'q' button is set as the 
+ 
 	# quitting button you may use any 
+ 
 	# desired button of your choice 
+
+6.The loop waits for a key press with cv2.waitKey(1). If the pressed key is 'q', the loop breaks and the program ends.
+ 
 	if cv2.waitKey(1) & 0xFF == ord('q'): 
 		break
+7.vid.release() releases the video capture object, freeing the camera resources.
 
-# After the loop release the cap object 
-vid.release() 
-# Destroy all the windows 
+# After the loop release the cap object
+
+vid.release()
+
+8.cv2.destroyAllWindows() closes all OpenCV windows.
+
+# Destroy all the windows
+
 cv2.destroyAllWindows()
-```
+
