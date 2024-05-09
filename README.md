@@ -236,38 +236,66 @@ A webcam, short for "web camera," is a digital camera that captures video and so
 
 import cv2 
 
-2.Define a video capture object (vid) by calling cv2.VideoCapture(0)
+2.Create a VideoCapture object to capture video from the default camera (camera index 0):
 
-vid = cv2.VideoCapture(0)
+video = cv2.VideoCapture(0)
 
-3.Start an infinite loop (while(True)) to continuously capture frames from the video:
+3.Check if the camera is opened successfully:
 
+if (video.isOpened() == False):
+
+    print("Error reading video file")
+    
+4.Get the resolution of the video frames: 
+ 
+frame_width = int(video.get(3)) 
+
+frame_height = int(video.get(4))
+
+5.Define the size of the video frames:
+   
+size = (frame_width, frame_height) 
+
+6.Create a VideoWriter object to save the video:
+
+result = cv2.VideoWriter('a.avi',  
+                         cv2.VideoWriter_fourcc(*'MJPG'),
+			 
+7.Enter a loop to read frames from the camera until the user presses 's' to stop:
+    
 while(True): 
+    ret, frame = video.read()
+
+    if ret == True:  
+    
+8.Write the captured frame to the output video file:
+
+        result.write(frame)
 	
-4.the function vid.read() captures a frame from the video and returns two values: ret, a boolean indicating whether a frame was successfully captured, and frame, the captured frame.
- 
-	ret, frame = vid.read() 
+9.Display the frame in a window named 'Frame':
 
-
- 5.cv2.imshow('frame', frame) displays the captured frame in a window named 'frame'.
- 
-	cv2.imshow('frame', frame) 
+        cv2.imshow('Frame', frame)
 	
-6.The loop waits for a key press with cv2.waitKey(1). If the pressed key is 'q', the loop breaks and the program ends.
- 
-	if cv2.waitKey(1) & 0xFF == ord('q'):
- 
-		break
-  
-7.vid.release() releases the video capture object, freeing the camera resources.
+10.Check if the user pressed 's' to stop capturing:
+      
+        if cv2.waitKey(1) & 0xFF == ord('s'): 
+            break
+   else: 
+        break
+11.Release the VideoCapture and VideoWriter objects after exiting the loop:  
 
-vid.release()
+video.release() 
+result.release() 
 
-8.cv2.destroyAllWindows() closes all OpenCV windows.
-
+12.Close all OpenCV windows:
 
 cv2.destroyAllWindows()
+
+13.Print a message indicating that the video was successfully saved:
+  
+print("The video was successfully saved")
 
 ## output
 
 https://github.com/ashrithadasoju/Exp/assets/169047414/74cf5510-3289-48f8-8a7d-1a5c1dc84f3f
+
