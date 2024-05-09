@@ -270,5 +270,4 @@ cv2.destroyAllWindows()
 
 ## output
 
-[Screencast from 08-05-24 01:02:25 PM IST.webm](https://github.com/ashrithadasoju/Exp/assets/169047414/45e411b0-6f2e-4f19-b867-84a8ce95be92)
 
