@@ -227,7 +227,9 @@ A webcam, short for "web camera," is a digital camera that captures video and so
 ## uses of webcam code
 
 1.Video Streaming
+
 2.Computer Vision Applications
+
 3.Testing and Debugging
 
 ## Example code for Webcam
